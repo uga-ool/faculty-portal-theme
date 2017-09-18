@@ -1,1 +1,1 @@
-# faculty-portal-theme
+# README #

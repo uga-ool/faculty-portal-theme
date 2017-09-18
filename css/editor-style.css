@@ -1,0 +1,147 @@
+body {
+	color: #333;
+	font-family: 'Merriweather Sans', Tahoma, sans-serif;
+	line-height: 1.625;
+}
+
+a {
+	color: #BA0C2F;
+	text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+	color: #333;
+}
+
+a.button {
+	background-color: #BA0C2F;
+	border: 0;
+	color: #fff;
+	font-weight: 700;
+	padding: 16px 24px;
+	text-decoration: none;
+	white-space: normal;
+	width: auto;
+}
+
+p {
+	margin: 0 0 28px;
+	padding: 0;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+b,
+strong,
+dt {
+	font-weight: 700;
+}
+
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+
+blockquote::before {
+	content: "\201C";
+	display: block;
+	font-size: 20px;
+	font-size: 2rem;
+	height: 0;
+	left: -20px;
+	position: relative;
+	top: -10px;
+}
+
+.pullquote {
+	color: #BA0C2F;
+	border: 1px solid #BA0C2F;
+	border-width: 3px 0 1px;
+	font-weight: bold;
+	padding: 1.4em 0 0;
+}
+
+.pullquote.alignright { 
+	margin-right: 0; 
+	text-align: left;
+}
+
+.pullquote.alignleft { 
+	margin-left: 0; 
+}
+
+.pullquote cite {
+	display: block;
+	font-style: italic;
+	font-weight: 400;
+	text-align: right;
+}
+
+.pullquote cite::before {
+	content: "\2014 ";
+}
+
+/* ## Headings
+--------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Merriweather', Georgia, serif;
+	font-weight: 600;
+	line-height: 1.2;
+	margin: 0 0 10px;
+}
+
+h5 {
+	text-transform: uppercase;
+}
+
+h6 {
+	text-transform: uppercase;
+}
+
+/* ## Tables
+--------------------------------------------- */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	line-height: 2;
+	margin-bottom: 40px;
+	width: 100%;
+	word-break: break-all;
+}
+
+tbody {
+	border-bottom: 1px solid #D6D2C4;
+}
+
+td,
+th {
+	border-top: 1px solid #D6D2C4;
+	text-align: left;
+}
+
+td {
+	padding: 6px;
+}
+
+th {
+	font-weight: 400;
+	padding: 0 6px;
+}
+
+tr:nth-of-type(odd) { 
+	background: #F5F4F0; 
+}
