@@ -5,7 +5,7 @@
 	Author: Stephanie Leary
 	Author URI: http://www.stephanieleary.com/
 
-	Version: 1.0
+	Version: 1.1
 
 	Tags: black, red, white, one-column, two-columns, three-columns, left-sidebar, right-sidebar, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
@@ -1508,20 +1508,6 @@ p.entry-meta {
 .fonts-loaded .trade-gothic {
 	font-family: 'TradeGothicLTStd-BdCn20', 'Trade Gothic LT Std Cn', 'Oswald', sans-serif;
 	font-weight: 400;
-}
-
-.fonts-loaded .commit-to {
-	font-family: 'TradeGothicLTStd-BdCn20', 'Trade Gothic LT Std Cn', 'Oswald', sans-serif;
-	letter-spacing: .15em;
-	text-transform: uppercase;
-}
-
-.fonts-loaded .commit-to:before {
-	content: "Commit To \A";
-	font-family: 'Merriweather', serif;
-	font-size: 60%;
-	letter-spacing: 0;
-	white-space: pre;
 }
 
 /* # Media Queries

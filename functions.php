@@ -84,3 +84,35 @@ function uga_body_classes( $classes ) {
 	
 	return $classes;
 }
+
+/* Localize CSS generated content */
+
+add_action( 'wp_enqueue_scripts', 'uga_localized_css' );
+function uga_localized_css() {
+
+	$content = __( 'Commit To ', 'uga-online' );
+	
+	$css .= ( sprintf( '
+
+		.fonts-loaded .commit-to {
+			font-family: "TradeGothicLTStd-BdCn20", "Trade Gothic LT Std Cn", "Oswald", sans-serif;
+			letter-spacing: .15em;
+			text-transform: uppercase;
+		}
+
+		.fonts-loaded .commit-to:before {
+			content: "%s \A";
+			font-family: "Merriweather", serif;
+			font-size: 60%;
+			letter-spacing: 0;
+			white-space: pre;
+		}
+
+		', $content );
+
+
+	if ( $css ) {
+		wp_add_inline_style( 'uga_localized_css', $css );
+	}
+
+}
