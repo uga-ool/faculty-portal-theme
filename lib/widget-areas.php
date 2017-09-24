@@ -61,20 +61,23 @@ function uga_before_sidebar_widgets() {
 	echo '<div id="mobile-sidebar-widgets"></div>';
 }
 
-
 //* register Front Page widget areas
-genesis_register_sidebar( array(
-	'id'          => 'front-page-1',
-	'name'        => esc_html__( 'Front Page Top Section', 'uga-online' ),
-	'description' => esc_html__( 'This is the front page top section.', 'uga-online' ),
-) );
-genesis_register_sidebar( array(
-	'id'          => 'front-page-2',
-	'name'        => esc_html__( 'Front Page Middle Section', 'uga-online' ),
-	'description' => esc_html__( 'This is the front page middle section.', 'uga-online' ),
-) );
-genesis_register_sidebar( array(
-	'id'          => 'front-page-3',
-	'name'        => esc_html__( 'Front Page Bottom Section', 'uga-online' ),
-	'description' => esc_html__( 'This is the front bottom section.', 'uga-online' ),
-) );
+add_action( 'widgets_init', 'uga_register_sidebars' );
+
+function uga_register_sidebars() {
+	genesis_register_sidebar( array(
+		'id'          => 'front-page-1',
+		'name'        => esc_html__( 'Front Page Top Section', 'uga-online' ),
+		'description' => esc_html__( 'This is the front page top section.', 'uga-online' ),
+	) );
+	genesis_register_sidebar( array(
+		'id'          => 'front-page-2',
+		'name'        => esc_html__( 'Front Page Middle Section', 'uga-online' ),
+		'description' => esc_html__( 'This is the front page middle section.', 'uga-online' ),
+	) );
+	genesis_register_sidebar( array(
+		'id'          => 'front-page-3',
+		'name'        => esc_html__( 'Front Page Bottom Section', 'uga-online' ),
+		'description' => esc_html__( 'This is the front bottom section.', 'uga-online' ),
+	) );
+}

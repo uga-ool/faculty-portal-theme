@@ -16,12 +16,17 @@ function uga_noposts_text( $text ) {
 add_post_type_support( 'page', 'excerpt' );
 
 //* Use excerpts as Featured Page widget content
-add_filter( 'get_the_content_limit', 'uga_genesis_content_limit', 99, 4 );
+add_filter( 'the_content', 'uga_featured_page_widget_content' );
+function uga_featured_page_widget_content( $content ) {
+	if ( is_front_page() && is_active_widget( 'Genesis_Featured_Page' ) ) {
+		$content = sprintf( '<p class="excerpt">%s <br /> %s</p>', get_post_field( 'post_excerpt', get_the_ID() ), $link );
+	}
+	return $content;
+}
 
+add_filter( 'get_the_content_limit', 'uga_genesis_content_limit', 9999, 4 );
 function uga_genesis_content_limit( $output, $content, $link, $max_characters ) {
-	$content = get_post_field( 'post_excerpt', get_the_ID() );
-	$output = sprintf( '<p class="excerpt">%s <br /> %s</p>', $content, $link );
-	return $output;
+	return sprintf( '<p class="excerpt">%s <br /> %s</p>', get_post_field( 'post_excerpt', get_the_ID() ), $link );
 }
 
 function scl_child_pages_shortcode() {
@@ -37,4 +42,4 @@ function scl_append_child_pages( $content ) {
 
    return $content;
 }
-add_filter( 'the_content','scl_append_child_pages' );
+add_filter( 'the_content', 'scl_append_child_pages' );

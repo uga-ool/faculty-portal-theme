@@ -13,7 +13,7 @@ function uga_custom_footer() {
 	echo '</div><!-- end .uga-logo -->';
 	
 	echo '<div class="uga-address one-half">';
-	echo wpautop( get_theme_mod( 'uga_footer_text', '&copy; ' . date("Y") . ' ' . get_option( 'blogname' ) ) );
+	echo wpautop( get_theme_mod( 'uga_footer_text', '&copy; ' . date( 'Y' ) . ' ' . get_option( 'blogname' ) ) );
 	echo '</div><!-- end .uga-address -->';
 
 	do_action( 'uga_after_footer_text' );
@@ -25,7 +25,7 @@ add_action( 'customize_register', 'scl_customizer_sections' );
 function scl_customizer_sections( $wp_customize ) {
 
 	$wp_customize->add_section( 'uga_footer', array(
-		'title' => _( 'Footer Text', 'uga-online' ),
+		'title' => __( 'Footer Text', 'uga-online' ),
 		'priority' => 105,
 		'capability' => 'manage_options',
 	) );

@@ -103,14 +103,6 @@ h6 {
 	margin: 0 0 10px;
 }
 
-h5 {
-	text-transform: uppercase;
-}
-
-h6 {
-	text-transform: uppercase;
-}
-
 /* ## Tables
 --------------------------------------------- */
 
@@ -144,4 +136,52 @@ th {
 
 tr:nth-of-type(odd) { 
 	background: #F5F4F0; 
+}
+
+/* ## Fonts
+---------------------------------------------- */
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.red {
+	color: #BA0C2F;
+}
+
+body,
+.nav-primary,
+.merriweathersans {
+	font-family: 'Merriweather Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.merriweather {
+	font-family: 'Merriweather', serif;
+}
+
+h3.date,
+.pullquote,
+.trade-gothic {
+	font-family: 'TradeGothicLTStd-BdCn20', 'Trade Gothic LT Std Cn', 'Oswald', sans-serif;
+	font-weight: 400;
+}
+
+.commit-to {
+	font-family: 'TradeGothicLTStd-BdCn20', 'Trade Gothic LT Std Cn', 'Oswald', sans-serif;
+	letter-spacing: .15em;
+	text-transform: uppercase;
+}
+
+.commit-to:before {
+	content: "Commit To \A";
+	font-family: 'Merriweather', serif;
+	font-size: 60%;
+	letter-spacing: 0;
+	white-space: pre;
 }
