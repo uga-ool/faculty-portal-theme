@@ -92,7 +92,7 @@ function uga_localized_css() {
 
 	$content = __( 'Commit To ', 'uga-online' );
 	
-	$css .= ( sprintf( '
+	$css .= sprintf( '
 
 		.fonts-loaded .commit-to {
 			font-family: "TradeGothicLTStd-BdCn20", "Trade Gothic LT Std Cn", "Oswald", sans-serif;
